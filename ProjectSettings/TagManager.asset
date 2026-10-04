@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - shockwave
+  - grass
+  - carrot bags
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - soldier
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: ground
+    uniqueID: 2629922617
+    locked: 0
+  - name: Props
+    uniqueID: 554095431
+    locked: 0
+  - name: player
+    uniqueID: 2838537829
+    locked: 0
+  - name: UI
+    uniqueID: 2407543091
+    locked: 0
+  m_RenderingLayers:
+  - Default

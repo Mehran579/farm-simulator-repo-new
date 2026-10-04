@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807113cb1a76e7447b723d8ea432b47d, type: 3}
+  m_Name: ENtering tuto
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: NPC 1
+    portrait: {fileID: -3724152801442325259, guid: 559d423d6a892bc41918a773e5236cad, type: 3}
+    text: Woahh!! what is that thing?
+  - speaker: NPC 2
+    portrait: {fileID: -7310443726858796772, guid: 559d423d6a892bc41918a773e5236cad, type: 3}
+    text: Is it some kind of biblically accurate angel or is it some kind of god?
+  - speaker: NPC 3
+    portrait: {fileID: -3724152801442325259, guid: 559d423d6a892bc41918a773e5236cad, type: 3}
+    text: Ooouiaaoga WOoOagaaAa !!!
+  - speaker: NPC 4
+    portrait: {fileID: -7310443726858796772, guid: 559d423d6a892bc41918a773e5236cad, type: 3}
+    text: Why is it so raidant and what is it doing here? What does it want from
+      us

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807113cb1a76e7447b723d8ea432b47d, type: 3}
+  m_Name: Carrot Boss
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: Carrot
+    portrait: {fileID: -2542069593327755888, guid: 29e714b37c6a8d641ab6bbe176e2eedf, type: 3}
+    text: RAWWRRRRRRRRRRRRRRRR !!
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: 'Woah whaahhat nd who are you ?
+
+'
+  - speaker: Maa Muli
+    portrait: {fileID: -2542069593327755888, guid: 29e714b37c6a8d641ab6bbe176e2eedf, type: 3}
+    text: Orewa MAA MULI desu (*i am <i>maa muli</i>)
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: But you are neither Muli nor a Maa that doesn't make sense T~T
+  - speaker: Maa Muli
+    portrait: {fileID: -2542069593327755888, guid: 29e714b37c6a8d641ab6bbe176e2eedf, type: 3}
+    text: "Yes but that's the limit of our dev's creativity (-\u03C9-;)"
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: Ehh can't argue on that, anyhow are you here for the game's plot twist?
+  - speaker: Maa Muli
+    portrait: {fileID: -2542069593327755888, guid: 29e714b37c6a8d641ab6bbe176e2eedf, type: 3}
+    text: Nehh idc about that, I'ma just leave yer sorry ahh alone
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: ...

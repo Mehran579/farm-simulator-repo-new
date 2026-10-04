@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807113cb1a76e7447b723d8ea432b47d, type: 3}
+  m_Name: 2 Convo Father 2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: Father
+    portrait: {fileID: 7375317777126769463, guid: 272dca85da3c38040b98ff370ed98dcd, type: 3}
+    text: 'I TOOK A SNOOZE FOR A MILI SECOND! WHAT DID YOU DO WITH THE SACK OF SEEDS '
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: how can someone sleep through that T~T, did u not witness Maa Mulli?
+  - speaker: Father
+    portrait: {fileID: 7375317777126769463, guid: 272dca85da3c38040b98ff370ed98dcd, type: 3}
+    text: Is this also one of your unfunny cringy jokes? i saw nothing
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: '*Edumnd Whispers
+
+      (dear dev this is not how you write a plot twist
+      T~T)'
+  - speaker: Father
+    portrait: {fileID: 7375317777126769463, guid: 272dca85da3c38040b98ff370ed98dcd, type: 3}
+    text: 'What are you BLABBBERING ABOUT >:(
+
+      Go and get some new seeds from
+      the market rn! '
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: But i...

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807113cb1a76e7447b723d8ea432b47d, type: 3}
+  m_Name: Convo Father 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: Father
+    portrait: {fileID: 7375317777126769463, guid: 272dca85da3c38040b98ff370ed98dcd, type: 3}
+    text: Yo ass finally awake u good for nothing freeloader >:(
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: A good morning to you too pops
+  - speaker: Father
+    portrait: {fileID: 7375317777126769463, guid: 272dca85da3c38040b98ff370ed98dcd, type: 3}
+    text: 'Enough with yer blabbering, take these carrot seeds and plant them to
+      progress with the story '
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: fuh u mean story?
