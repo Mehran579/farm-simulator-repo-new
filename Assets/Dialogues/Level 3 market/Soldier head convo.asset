@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 807113cb1a76e7447b723d8ea432b47d, type: 3}
-  m_Name: Soldier entry
+  m_Name: Soldier head convo
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speaker: Unkown
-    portrait: {fileID: 0}
-    text: HEY!!!! stop right where you are!
+  - speaker: 'Ser Render '
+    portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
+    text: I am Ser Render, the leader of this platoon

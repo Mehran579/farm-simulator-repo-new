@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807113cb1a76e7447b723d8ea432b47d, type: 3}
+  m_Name: 2 Soldier head convo 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: "Could it be\u2026? Am I truly the long-forgotten legendary hero, reborn
+      after a century to save this kingdom from the calamities that plague it, and
+      usher in an age of prosperity, just as the prophecy foretold upon my predecessor\u2019s
+      death?"
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: "Yes\u2026 yes, it all makes sense now."
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: The royal army has come to retrieve me.
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: "I had a feeling\u2026 a hunch, if you will. Nay if I must say it plainly\u2026
+      I knew this day would come."
+  - speaker: Ser Render
+    portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
+    text: "Nah. We\u2019re simply short on soldiers. Nothing else you whoopass"
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: If that's so, then why only me?
+  - speaker: Ser Render
+    portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
+    text: Cuz It'll be hard to distinguish these black noface normies with the enemeies
+      -_-
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: '*whispers ( I hate this story T~T )'
+  - speaker: Ser Render
+    portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
+    text: Quit blabbering, let's go to the war!!!!
