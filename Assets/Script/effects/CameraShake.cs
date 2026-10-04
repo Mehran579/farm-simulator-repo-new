@@ -69,4 +69,50 @@ public class CameraShake : MonoBehaviour
         shakeCoroutine = null;
         isShaking = false;
     }
+
+
+    [Header("Camera Zoom")]
+    public Transform player;
+    public float movePerStep = 1f;
+    public float stepDelay = 0.1f;
+    public int numberOfSteps = 5;
+
+    public static void MoveCameraTowardPlayer()
+    {
+        Camera mainCam = Camera.main;
+
+        if (mainCam == null)
+        {
+            Debug.LogError("no main cam found");
+            return;
+        }
+
+        CameraShake shaker = mainCam.GetComponent<CameraShake>();
+
+        if (shaker == null)
+        {
+            shaker = mainCam.gameObject.AddComponent<CameraShake>();
+        }
+
+        shaker.StartCoroutine(shaker.StepMoveRoutine());
+    }
+
+    private IEnumerator StepMoveRoutine()
+    {
+        Transform camTransform = transform;
+
+        for (int i = 0; i < numberOfSteps; i++)
+        {
+            Vector3 direction = player.position - camTransform.position;
+            direction.z = 0f;
+
+            if (direction.sqrMagnitude > 0.001f)
+            {
+                direction.Normalize();
+                camTransform.position += direction * movePerStep;
+            }
+
+            yield return new WaitForSeconds(stepDelay);
+        }
+    }
 }
