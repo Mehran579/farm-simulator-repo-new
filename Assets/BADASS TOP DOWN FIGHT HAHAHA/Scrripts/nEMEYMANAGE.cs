@@ -1,30 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class nEMEMYMANAGE : MonoBehaviour
 {
-    [SerializeField] WAVE[] waves;            // drag your wave assets in, in order
-    [SerializeField] Transform player;
-    [SerializeField] Transform[] targets;         // the 4 track points + the player
-    [SerializeField] float spawnRadius = 10f;     // enemies appear on a circle this far from the player
-    [SerializeField] float timeBetweenWaves = 3f;
+    public WAVE[] waves;
+    public Transform player;
+    public Transform[] targets;
+    public float spawnRadius = 10f;
+    public float timeBetweenWaves = 3f;
 
     readonly List<Enemy> aliveEnemies = new List<Enemy>();
 
-    // Start can be a coroutine: Unity runs it as one automatically
     IEnumerator Start()
     {
         foreach (WAVE wave in waves)
         {
-            yield return StartCoroutine(SpawnWave(wave));      // spawn every enemy in this wave
-            yield return new WaitUntil(AllEnemiesDead);        // wait until the player kills them all
-            yield return new WaitForSeconds(timeBetweenWaves); // short breather
+            yield return StartCoroutine(SpawnWave(wave));
+            yield return new WaitUntil(AllEnemiesDead);
+            yield return new WaitForSeconds(timeBetweenWaves);
         }
 
-        Debug.Log("All waves cleared");
+        //Debug.Log("all waves cleared");
+        winEnd.SetActive(true);
     }
-
+    public GameObject winEnd;
     IEnumerator SpawnWave(WAVE wave)
     {
         foreach (EnemyGroup group in wave.groups)
@@ -46,7 +47,7 @@ public class nEMEMYMANAGE : MonoBehaviour
 
     bool AllEnemiesDead()
     {
-        aliveEnemies.RemoveAll(e => e == null);   // a destroyed enemy shows up as null
+        aliveEnemies.RemoveAll(e => e == null);
         return aliveEnemies.Count == 0;
     }
 }

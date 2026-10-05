@@ -3937,6 +3937,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &17872810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3993,6 +3994,9 @@ GameObject:
   m_Component:
   - component: {fileID: 19739125}
   - component: {fileID: 19739126}
+  - component: {fileID: 19739129}
+  - component: {fileID: 19739128}
+  - component: {fileID: 19739127}
   m_Layer: 0
   m_Name: prop_anvil_0
   m_TagString: Untagged
@@ -4074,6 +4078,113 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &19739127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19739124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: e1a56039badb02f469aa84fdd5e2b184, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 956cd32c-277a-49c4-9d01-b13199c782c3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e4d2859e-2067-478d-8011-f0de71379cc4
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 800389fe-8923-45df-a6a5-1737f2026edd
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &19739128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19739124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!60 &19739129
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19739124}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.90625, y: 0.71875}
+    newSize: {x: 0.90625, y: 0.71875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.453125, y: 0.359375}
+      - {x: -0.453125, y: -0.234375}
+      - {x: 0.203125, y: -0.234375}
+      - {x: 0.296875, y: -0.203125}
+      - {x: 0.421875, y: 0.046875}
+      - {x: 0.421875, y: 0.265625}
+      - {x: 0.296875, y: 0.359375}
+  m_UseDelaunayMesh: 1
 --- !u!1 &24891092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,6 +4384,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &30932408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4564,6 +4676,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &35732341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5057,6 +5170,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &49128868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5302,6 +5416,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &52131256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6242,6 +6357,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &119951873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6984,6 +7100,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &149979645
 GameObject:
   m_ObjectHideFlags: 0
@@ -7229,6 +7346,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &168382364
 GameObject:
   m_ObjectHideFlags: 0
@@ -7551,6 +7669,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &169586376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7607,6 +7726,8 @@ GameObject:
   m_Component:
   - component: {fileID: 171628518}
   - component: {fileID: 171628517}
+  - component: {fileID: 171628520}
+  - component: {fileID: 171628519}
   m_Layer: 0
   m_Name: well_0
   m_TagString: Untagged
@@ -7688,6 +7809,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1136212634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171628519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171628516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!114 &171628520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171628516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 0}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: e185b25f-4e06-4c7a-a018-e107a037590e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d4681995-4a26-466b-b60b-1a8f9ec000ed
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ac8efa6a-5ffb-4022-a112-f8ee0e778bf4
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &172944926
 GameObject:
   m_ObjectHideFlags: 0
@@ -8150,6 +8324,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &188176730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8655,6 +8830,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &239395995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8900,6 +9076,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &257124581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9054,6 +9231,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &262541928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9716,6 +9894,8 @@ GameObject:
   - component: {fileID: 319007216}
   - component: {fileID: 319007215}
   - component: {fileID: 319007217}
+  - component: {fileID: 319007219}
+  - component: {fileID: 319007218}
   m_Layer: 0
   m_Name: houseexterior_0
   m_TagString: Untagged
@@ -9843,6 +10023,59 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &319007218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319007214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: d9fd880d10d1a4a4ca0d5e9bd520b4ee, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 8c7ebdcd-8ffd-4bb5-8533-913bf62f0d4e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 7af4238d-a1c3-467f-ae30-23a3d09ede88
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b41a1cc2-32fb-40e2-b151-e721184cb88c
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &319007219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319007214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
 --- !u!1 &325325927
 GameObject:
   m_ObjectHideFlags: 0
@@ -10051,6 +10284,9 @@ GameObject:
   m_Component:
   - component: {fileID: 330691010}
   - component: {fileID: 330691009}
+  - component: {fileID: 330691013}
+  - component: {fileID: 330691012}
+  - component: {fileID: 330691011}
   m_Layer: 0
   m_Name: treesmall_0 (1)
   m_TagString: Untagged
@@ -10132,6 +10368,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1136212634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &330691011
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330691008}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.48437506
+--- !u!114 &330691012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330691008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: 1ffe0a82b346657428c3a1f5a9226002, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 8e1d30a7-ac1d-48f0-9eb2-da3a5d91fd47
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: b919b4a1-622f-4660-885e-9becb5ada944
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 3f36c0b4-0b72-4537-9172-b05afa6660fe
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &330691013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330691008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
 --- !u!1 &330837655
 GameObject:
   m_ObjectHideFlags: 0
@@ -10609,6 +10934,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &358833787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10939,6 +11265,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &377977013
 GameObject:
   m_ObjectHideFlags: 0
@@ -11093,6 +11420,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &381705864
 GameObject:
   m_ObjectHideFlags: 0
@@ -12181,6 +12509,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &412346598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13133,6 +13462,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &451537087
 GameObject:
   m_ObjectHideFlags: 0
@@ -13241,6 +13571,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &451537091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13675,6 +14006,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &461969931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14429,6 +14761,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &480133975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16338,6 +16671,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &584186896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16720,6 +17054,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &603253468
 GameObject:
   m_ObjectHideFlags: 0
@@ -16996,6 +17331,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &612058055
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17395,6 +17731,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &620544788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17731,6 +18068,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &641741021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18915,6 +19253,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &685349715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19069,6 +19408,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &689443078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19972,6 +20312,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &710336336
 GameObject:
   m_ObjectHideFlags: 0
@@ -20080,6 +20421,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &710336340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20493,6 +20835,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &738636063
 GameObject:
   m_ObjectHideFlags: 0
@@ -20601,6 +20944,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &738636067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20657,6 +21001,9 @@ GameObject:
   m_Component:
   - component: {fileID: 748448440}
   - component: {fileID: 748448441}
+  - component: {fileID: 748448444}
+  - component: {fileID: 748448443}
+  - component: {fileID: 748448442}
   m_Layer: 0
   m_Name: stall_smith_0
   m_TagString: Untagged
@@ -20738,6 +21085,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &748448442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748448439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!114 &748448443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748448439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: 0971023a9bc1ea04090214bb5f77c3f8, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 90a14356-ebbd-48c1-9f15-f2f44156997e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 8922f0aa-b8f1-445a-8169-12c50571e646
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 22dcc0a1-4526-4b72-b689-7122964d115c
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!61 &748448444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748448439}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.10465178}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 1.7906964}
+  m_EdgeRadius: 0
 --- !u!1 &752637632
 GameObject:
   m_ObjectHideFlags: 0
@@ -20999,6 +21445,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &758221300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21290,6 +21737,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &768697261
 GameObject:
   m_ObjectHideFlags: 0
@@ -21739,6 +22187,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &793801565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21893,6 +22342,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &793939640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22414,6 +22864,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &820252932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23356,6 +23807,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &886539851
 GameObject:
   m_ObjectHideFlags: 0
@@ -23683,6 +24135,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &895560542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24685,6 +25138,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &934321925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24889,6 +25343,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &942990557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25963,6 +26418,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1009475786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26117,6 +26573,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1029490343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26271,6 +26728,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1039101156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26425,6 +26883,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1040461620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26979,6 +27438,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1089500973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27142,7 +27602,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8317552e91b2c5c469168521e44d9308, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -27175,7 +27635,7 @@ MonoBehaviour:
   m_fontSizeMax: 329.6
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -27209,7 +27669,7 @@ MonoBehaviour:
   m_margin: {x: -20.064354, y: 0, z: -113.64212, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1101517037
@@ -27831,6 +28291,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1120793475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27887,6 +28348,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1122841734}
   - component: {fileID: 1122841735}
+  - component: {fileID: 1122841736}
+  - component: {fileID: 1122841738}
+  - component: {fileID: 1122841737}
   m_Layer: 0
   m_Name: stall_pottery_0
   m_TagString: Untagged
@@ -27968,6 +28432,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1122841736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122841733}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.11931744}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 1.7613652}
+  m_EdgeRadius: 0
+--- !u!114 &1122841737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122841733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!114 &1122841738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122841733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: a929a57e67a46114f9b74282b9542210, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: f9aa4ad7-0708-45eb-bdfc-44f4f51df652
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 24d31daa-7d5e-4e85-9657-7ac9e7c01681
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 102d24e1-89d2-43be-97c3-e1829b9a1cf6
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &1128810494
 GameObject:
   m_ObjectHideFlags: 0
@@ -28770,6 +29333,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1185232483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29015,6 +29579,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1188298897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29671,6 +30236,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1222563723
 GameObject:
   m_ObjectHideFlags: 0
@@ -29902,6 +30468,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 269444bdd070ced4fb341a82c34e9963, type: 3}
   m_PrefabInstance: {fileID: 1227870615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1236556367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1236556368}
+  m_Layer: 0
+  m_Name: borderrs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1236556368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236556367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2049749211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1238050947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30266,6 +30863,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1263212841}
   - component: {fileID: 1263212842}
+  - component: {fileID: 1263212845}
+  - component: {fileID: 1263212844}
+  - component: {fileID: 1263212843}
   m_Layer: 0
   m_Name: prop_notice_board_0
   m_TagString: Untagged
@@ -30347,6 +30947,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1263212843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263212840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!61 &1263212844
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263212840}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96875, y: 0.90625}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.96875, y: 0.90625}
+  m_EdgeRadius: 0
+--- !u!114 &1263212845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263212840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: cdb83da99f841e049adf455cdb98537b, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 9770764a-0846-4b1b-805c-2ce5ba7376d7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a4200417-dec4-4eb5-ac01-061c10952856
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ecc2a0b6-364a-452c-9fdb-3c73e56ae484
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &1264070487
 GameObject:
   m_ObjectHideFlags: 0
@@ -30546,6 +31245,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1268813526
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79236,6 +79936,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1292196791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79292,6 +79993,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1293543727}
   - component: {fileID: 1293543728}
+  - component: {fileID: 1293543731}
+  - component: {fileID: 1293543730}
+  - component: {fileID: 1293543729}
   m_Layer: 0
   m_Name: stall_butcher_0
   m_TagString: Untagged
@@ -79373,6 +80077,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1293543729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293543726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: 8ea7d509ffec9dc499f2ec0e965d3303, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: fd704100-ca39-4098-8637-eb4c668df3fd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 58549d41-5c66-4958-bddb-93491e201d60
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: e0951b50-ca06-493b-be9c-033014a2056c
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &1293543730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293543726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!61 &1293543731
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293543726}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.11754644}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 1.7649071}
+  m_EdgeRadius: 0
 --- !u!1 &1294989778
 GameObject:
   m_ObjectHideFlags: 0
@@ -79581,6 +80384,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1296156651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79735,6 +80539,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1297778818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80357,6 +81162,7 @@ MonoBehaviour:
   isBossTrigger: 1
   knocbackforce: 20
   bossSequence: {fileID: 1503139882}
+  inverontru: {fileID: 603253468}
 --- !u!61 &1321369036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80725,6 +81531,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1332002098
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81730,6 +82537,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1389828559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82497,6 +83305,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1432942842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82651,6 +83460,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1435263554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82987,6 +83797,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1446644092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83506,6 +84317,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1464269743
 GameObject:
   m_ObjectHideFlags: 0
@@ -84076,6 +84888,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1488260617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84367,6 +85180,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1490936801
 GameObject:
   m_ObjectHideFlags: 0
@@ -84468,6 +85282,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1492591209}
   - component: {fileID: 1492591210}
+  - component: {fileID: 1492591213}
+  - component: {fileID: 1492591212}
+  - component: {fileID: 1492591211}
   m_Layer: 0
   m_Name: stall_produce_0
   m_TagString: Untagged
@@ -84549,6 +85366,80 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1492591211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492591208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: dbc038d805307854aa56c7f43cd4a746, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 22e467b3-6822-49d9-be86-e82b4fffcd47
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: b483c2ce-6c88-4cdb-a3f7-8e956bf00795
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: abba3f26-7e69-4240-8070-52cc1fd6f5c5
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &1492591212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492591208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!65 &1492591213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492591208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9999998, y: 1.7713007, z: 0.19999999}
+  m_Center: {x: 0, y: 0.11434955, z: 0}
 --- !u!1 &1493910327
 GameObject:
   m_ObjectHideFlags: 0
@@ -85322,6 +86213,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1519271698
 GameObject:
   m_ObjectHideFlags: 0
@@ -85922,6 +86814,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1532641094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87352,6 +88245,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1582853146
 GameObject:
   m_ObjectHideFlags: 0
@@ -87551,6 +88445,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1595994555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89471,6 +90366,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1671258811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89839,6 +90735,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1673207822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89895,6 +90792,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1678786994}
   - component: {fileID: 1678786993}
+  - component: {fileID: 1678786997}
+  - component: {fileID: 1678786996}
+  - component: {fileID: 1678786995}
   m_Layer: 0
   m_Name: tree_0
   m_TagString: Untagged
@@ -89976,6 +90876,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1136212634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678786995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678786992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: 1ffe0a82b346657428c3a1f5a9226002, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: d1bd3275-3dbb-4aab-9ca9-5884a8dfe966
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 50c2177f-334d-48ab-ad76-ed548245c6e3
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: f1025e0f-1c8e-4051-969d-e4b419db724f
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &1678786996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678786992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!58 &1678786997
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678786992}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.953125
 --- !u!1 &1682300200
 GameObject:
   m_ObjectHideFlags: 0
@@ -90621,6 +91610,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1708190683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91178,7 +92168,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8317552e91b2c5c469168521e44d9308, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -91245,7 +92235,7 @@ MonoBehaviour:
   m_margin: {x: -499.24756, y: -51.00102, z: -89.78433, w: -201.91885}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1718388357
@@ -91349,6 +92339,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1727771925}
   - component: {fileID: 1727771926}
+  - component: {fileID: 1727771929}
+  - component: {fileID: 1727771928}
+  - component: {fileID: 1727771927}
   m_Layer: 0
   m_Name: stall_bakery_0
   m_TagString: Untagged
@@ -91430,6 +92423,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1727771927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727771924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: e3c456c4d45c51949b8c9ed68a620f96, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 1767b1db-aec2-4226-8ee1-e7710e92b8ff
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: fdb9e721-4144-40af-9e5d-4815d4fe858f
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 177a0977-a2d4-4044-b89f-c3538eff5ee0
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!61 &1727771928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727771924}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.11636689}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 1.7672663}
+  m_EdgeRadius: 0
+--- !u!114 &1727771929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727771924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
 --- !u!1 &1730918929
 GameObject:
   m_ObjectHideFlags: 0
@@ -91653,6 +92745,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1741716594}
   - component: {fileID: 1741716595}
+  - component: {fileID: 1741716598}
+  - component: {fileID: 1741716597}
+  - component: {fileID: 1741716596}
   m_Layer: 0
   m_Name: stall_cloth_0
   m_TagString: Untagged
@@ -91734,6 +92829,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1741716596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741716593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!114 &1741716597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741716593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: bfcbd21ad0364714cab7ace95610534c, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 42e63612-a4cf-4ccc-9b56-d32c18f56ffd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e177c705-3e33-49f2-a0d4-549be7513353
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: bd0dda1e-77e9-43fa-a900-c85e8de30503
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!61 &1741716598
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741716593}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &1744175417
 GameObject:
   m_ObjectHideFlags: 0
@@ -91888,6 +93082,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1745569666
 GameObject:
   m_ObjectHideFlags: 0
@@ -92027,6 +93222,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1750892282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92491,6 +93687,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1766758057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92859,6 +94056,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1772817875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93095,6 +94293,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1789397785}
   - component: {fileID: 1789397784}
+  - component: {fileID: 1789397788}
+  - component: {fileID: 1789397787}
+  - component: {fileID: 1789397786}
   m_Layer: 0
   m_Name: treesmall_0
   m_TagString: Untagged
@@ -93176,6 +94377,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1136212634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789397786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789397783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: 1ffe0a82b346657428c3a1f5a9226002, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: d79c86f6-e946-4117-8be1-f2c687a2695a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ca234a7a-ac46-46ca-8f37-8c5e14217210
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 72b97bca-af95-4179-bc56-0bffe1ee0bce
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!58 &1789397787
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789397783}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  m_Radius: 0.48437506
+--- !u!114 &1789397788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789397783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
 --- !u!1 &1792359808
 GameObject:
   m_ObjectHideFlags: 0
@@ -93721,6 +95011,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1822473399
 GameObject:
   m_ObjectHideFlags: 0
@@ -94066,6 +95357,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1829651417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95052,6 +96344,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1864167491
 GameObject:
   m_ObjectHideFlags: 0
@@ -97164,6 +98457,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1958207395
 GameObject:
   m_ObjectHideFlags: 0
@@ -97318,6 +98612,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &1958554382
 GameObject:
   m_ObjectHideFlags: 0
@@ -97816,6 +99111,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1978339839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98152,6 +99448,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &1983226853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98558,6 +99855,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &2010632603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98712,6 +100010,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &2016475931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98866,6 +100165,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &2017579170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -99542,6 +100842,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &2038830219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -99740,7 +101041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2049749211
 Transform:
   m_ObjectHideFlags: 0
@@ -99780,6 +101081,7 @@ Transform:
   - {fileID: 1633877396}
   - {fileID: 859154427}
   - {fileID: 363972238}
+  - {fileID: 1236556368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050043608
@@ -100183,6 +101485,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &2062591804
 GameObject:
   m_ObjectHideFlags: 0
@@ -101141,6 +102444,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2108898060}
   - component: {fileID: 2108898059}
+  - component: {fileID: 2108898063}
+  - component: {fileID: 2108898062}
+  - component: {fileID: 2108898061}
   m_Layer: 0
   m_Name: treesmall_0 (2)
   m_TagString: Untagged
@@ -101222,6 +102528,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1136212634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2108898061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108898058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c566d90ab9a80449363747ebe59bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::customColliderDialogueTrigger
+  dialogue: {fileID: 11400000, guid: 1ffe0a82b346657428c3a1f5a9226002, type: 2}
+  requireInput: 1
+  interact:
+    m_Name: Interact
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 577bb79e-cbe5-4437-852a-496378983e76
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 99928e91-129d-4f97-ba0c-cc3a040b9e72
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 13e37f81-4a1c-40fb-a254-8368aecb58df
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact
+      m_Flags: 0
+    m_Flags: 0
+--- !u!58 &2108898062
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108898058}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0000009536743, y: 0}
+  m_Radius: 0.48437506
+--- !u!114 &2108898063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108898058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9419704459b8034a806b9dc6185fbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
+  E: {fileID: 2050480762}
+  spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
 --- !u!1001 &2110006410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101496,6 +102891,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!61 &2130021114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102133,6 +103529,7 @@ MonoBehaviour:
   isBossTrigger: 0
   knocbackforce: 0
   bossSequence: {fileID: 0}
+  inverontru: {fileID: 0}
 --- !u!1 &2139938161
 GameObject:
   m_ObjectHideFlags: 0

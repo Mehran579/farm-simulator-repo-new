@@ -1,12 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Put this on the enemy prefab and on the player (same object as the Enemy / playerhealth script).
 public class HitFlash : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer sprite;      // leave empty to auto-find on this object or a child
-    [SerializeField] Color flashColor = Color.red;
-    [SerializeField] float flashDuration = 0.1f;
+    public SpriteRenderer sprite;
+    public Color flashColor = Color.red;
+    public float flashDuration = 0.1f;
 
     Color originalColor;
     Coroutine running;
@@ -17,10 +16,8 @@ public class HitFlash : MonoBehaviour
         originalColor = sprite.color;
     }
 
-    // One quick colour flash (used by enemies)
     public void Flash() => Restart(FlashRoutine());
 
-    // Sprite blinks on/off for a while (used by the player)
     public void Blink(float duration, float interval) => Restart(BlinkRoutine(duration, interval));
 
     void Restart(IEnumerator routine)

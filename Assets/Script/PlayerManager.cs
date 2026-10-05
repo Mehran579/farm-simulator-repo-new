@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
     public float MoveSpeed;
     public static bool canMove = true;
     Rigidbody2D rb;
-    public enum PlayerState { Move, Cutscene, MovingCutScene };
+    public enum PlayerState { Move, Cutscene, MovingCutScene, knockback };
     public PlayerState currentState;
 
 
@@ -64,6 +64,8 @@ public class PlayerManager : MonoBehaviour
 
             case PlayerState.MovingCutScene:
                 PlayCutScene(currentCutSceneState);
+                break;
+            case PlayerState.knockback:
                 break;
         }
     }

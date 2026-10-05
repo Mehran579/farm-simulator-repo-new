@@ -24,20 +24,46 @@ public class cropTrigger : MonoBehaviour
                 startbossSequence(collision.gameObject);
         }
     }
+    //void startbossSequence(GameObject Player)
+    //{
+    //    Rigidbody2D rb = Player.GetComponent<Rigidbody2D>();
+
+    //    rb.AddForce(
+    //        (Player.transform.position - transform.position).normalized * knocbackforce,
+    //        ForceMode2D.Impulse
+    //    );
+
+    //    bossSequence.SetActive(true);
+    //    StartCoroutine(StopPlayer(rb));
+    //}
     void startbossSequence(GameObject Player)
     {
         Rigidbody2D rb = Player.GetComponent<Rigidbody2D>();
-        Player.GetComponent<PlayerManager>().currentState = PlayerManager.PlayerState.Cutscene;
-        rb.AddForce((Player.transform.position - transform.position).normalized * knocbackforce, ForceMode2D.Impulse);
-        //Player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+        PlayerManager pm = Player.GetComponent<PlayerManager>();
+        pm.currentState = PlayerManager.PlayerState.knockback;
+        Vector2 direction = (Player.transform.position - transform.position).normalized;
+        rb.AddForce(direction * knocbackforce, ForceMode2D.Impulse);
         bossSequence.SetActive(true);
-        StartCoroutine(StopPlayer(rb));
+        inverontru.SetActive(false);
+        StartCoroutine(StopPlayer(rb, pm));
+
     }
-    IEnumerator StopPlayer(Rigidbody2D Player)
+    public GameObject inverontru;
+
+    IEnumerator StopPlayer(Rigidbody2D rb, PlayerManager pm)
     {
-        //Debug.Log("caleed");
-        yield return new WaitForSecondsRealtime(0.15f);
-        //Debug.Log("should stop");
-        Player.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(0.15f);
+
+        rb.linearVelocity = Vector2.zero;
+        pm.currentState = PlayerManager.PlayerState.Cutscene;
     }
+    private void OnDestroy()
+{
+    //Debug.LogError(
+    //    $"CROP DESTROYED: {gameObject.name}\n" +
+    //    $"Scene: {gameObject.scene.name}\n" +
+    //    $"Instance ID: {GetInstanceID()}\n" +
+    //    $"Stack:\n{System.Environment.StackTrace}"
+    //);
+}
 }

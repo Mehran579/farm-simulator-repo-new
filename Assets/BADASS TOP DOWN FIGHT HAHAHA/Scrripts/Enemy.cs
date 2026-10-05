@@ -1,24 +1,23 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] int health = 3;
-    [SerializeField] float moveSpeed = 3f;
+    public int health = 3;
+    public float moveSpeed = 3f;
 
     [Header("Targeting")]
-    [SerializeField] float offsetRadius = 0.8f;   // each enemy aims slightly off the target so they don't stack
-    [SerializeField] float repickMin = 2f;        // seconds before choosing a new target
-    [SerializeField] float repickMax = 4f;
+    public float offsetRadius = 0.8f;
+    public float repickMin = 2f;
+    public float repickMax = 4f;
 
     [Header("Contact Damage")]
-    [SerializeField] int contactDamage = 1;
-    [SerializeField] float contactCooldown = 0.5f;   // seconds between hits from this enemy
+    public int contactDamage = 1;
+    public float contactCooldown = 0.5f;
 
     Rigidbody2D rb;
     float nextHitTime;
-    Transform[] targets;      // the 4 track points + the player
+    Transform[] targets;
     Transform target;
     Vector2 offset;
 
@@ -30,11 +29,10 @@ public class Enemy : MonoBehaviour, IDamageable
         hitFlash = GetComponent<HitFlash>();
     }
 
-    // The spawner calls this right after Instantiate
     public void Init(Transform[] targets)
     {
         this.targets = targets;
-        offset = Random.insideUnitCircle * offsetRadius;   // picked once, kept for this enemy's life
+        offset = Random.insideUnitCircle * offsetRadius;
         StartCoroutine(RepickRoutine());
     }
 
@@ -51,16 +49,14 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         if (target == null) return;
 
-        // Re-read the position every tick, so the enemy follows the target as it moves
         Vector2 goal = (Vector2)target.position + offset;
         rb.MovePosition(Vector2.MoveTowards(rb.position, goal, moveSpeed * Time.fixedDeltaTime));
     }
 
-    // Runs every physics tick while this enemy's collider touches another collider
     void OnCollisionStay2D(Collision2D col)
     {
-        if (Time.time < nextHitTime) return;                 // still on cooldown
-        if (!col.gameObject.CompareTag("Player")) return;    // enemies are IDamageable too, so filter by tag
+        if (Time.time < nextHitTime) return;
+        if (!col.gameObject.CompareTag("Player")) return;
 
         if (col.gameObject.TryGetComponent<IDamageable>(out var target))
         {

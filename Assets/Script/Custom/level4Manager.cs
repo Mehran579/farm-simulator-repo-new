@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class level4Manager : MonoBehaviour
 {
@@ -71,7 +72,7 @@ public class level4Manager : MonoBehaviour
     {
         DialogueManager.Instance.StartDialogue(lastdialogue, () =>
         {
-
+            SceneManager.LoadScene(1);
         });
     }
     public GameObject[] todisable;
