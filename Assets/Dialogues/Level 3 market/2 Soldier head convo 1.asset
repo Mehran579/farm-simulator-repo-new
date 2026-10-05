@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 2 Soldier head convo 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speaker: Edmund Chamar
-    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+  - speaker: Ser Render
+    portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
     text: "By decree of the Crown and by order of the King\u2019s Court, thou art
       hereby commanded to take up arms and join the Kingdom\u2019s host in the War
       of the Carrot Seeds. Thou shalt present thyself for conscription without delay.\r\n"

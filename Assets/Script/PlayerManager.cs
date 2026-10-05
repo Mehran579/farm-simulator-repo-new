@@ -102,9 +102,9 @@ public class PlayerManager : MonoBehaviour
         exclamatipon.SetActive(false);
         DialogueManager.Instance.StartDialogue(fatherDialogue1);
     }
-    private void Start()
-    {
-        TEMPmarketDoor.StartCoroutine(TEMPmarketDoor.ChangeLevel(GetComponent<Collider2D>()));
-    }
-    public Door_House TEMPmarketDoor;
+    //private void Start()
+    //{
+    //    TEMPmarketDoor.StartCoroutine(TEMPmarketDoor.ChangeLevel(GetComponent<Collider2D>()));
+    //}
+    //public Door_House TEMPmarketDoor;
 }
