@@ -72,8 +72,15 @@ public class level4Manager : MonoBehaviour
     {
         DialogueManager.Instance.StartDialogue(lastdialogue, () =>
         {
-            SceneManager.LoadScene(1);
+            StartCoroutine(change());
         });
     }
+    IEnumerator change()
+    {
+        yield return screenfade.FadeToBlack();
+
+        SceneManager.LoadScene(1);
+    }
     public GameObject[] todisable;
+    public ScreenFade screenfade;
 }

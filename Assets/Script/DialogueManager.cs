@@ -16,17 +16,26 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanel;
     public TMP_Text speakerText;
     public TMP_Text bodyText;
-    public Image portraitImage; 
+    public Image portraitImage;
 
     [Header("Settings")]
     public float typeSpeed = 0.03f;
-    public InputAction advance; 
+    public InputAction advance;
     Queue<DialogueLine> lines = new Queue<DialogueLine>();
     Coroutine typing;
     string currentFullText;
     bool isTyping;
     int startFrame = -1;
 
+    [Header("Click Hint (optional)")]
+    public Image clickHint;
+    public int hintForFirstLines = 6;
+    public float hintDelay = 0.4f;
+    public float hintMinAlpha = 0.3f;
+    public float hintMaxAlpha = 0.65f;
+
+    Coroutine hintRoutine;
+    int linesShown;
 
     public bool IsActive => dialoguePanel.activeSelf;
 
@@ -42,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     {
         Instance = this;
         dialoguePanel.SetActive(false);
+        SetHintAlpha(0f);
     }
 
     void OnEnable() => advance.Enable();
@@ -58,6 +68,7 @@ public class DialogueManager : MonoBehaviour
                 StopCoroutine(typing);
                 bodyText.text = currentFullText;
                 isTyping = false;
+                ShowHint();
             }
             else ShowNextLine();
         }
@@ -68,7 +79,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (data == null || data.lines.Length == 0 || IsActive) return;
         this.onComplete = callback;
-        startFrame = Time.frameCount; 
+        startFrame = Time.frameCount;
         lines.Clear();
         foreach (var line in data.lines) lines.Enqueue(line);
         dialoguePanel.SetActive(true);
@@ -78,6 +89,9 @@ public class DialogueManager : MonoBehaviour
 
     void ShowNextLine()
     {
+        HideHint();
+        linesShown++;
+
         if (lines.Count == 0) { EndDialogue(); return; }
 
         DialogueLine line = lines.Dequeue();
@@ -103,10 +117,49 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }
         isTyping = false;
+        ShowHint();
+    }
+
+    void SetHintAlpha(float a)
+    {
+        if (clickHint == null) return;
+        Color c = clickHint.color;
+        c.a = a;
+        clickHint.color = c;
+    }
+
+    void ShowHint()
+    {
+        if (clickHint == null) return;
+        if (hintForFirstLines > 0 && linesShown > hintForFirstLines) return;
+        if (hintRoutine != null) StopCoroutine(hintRoutine);
+        hintRoutine = StartCoroutine(HintPulse());
+    }
+
+    void HideHint()
+    {
+        if (hintRoutine != null) { StopCoroutine(hintRoutine); hintRoutine = null; }
+        SetHintAlpha(0f);
+    }
+
+    IEnumerator HintPulse()
+    {
+        SetHintAlpha(0f);
+        yield return new WaitForSecondsRealtime(hintDelay);
+
+        float t = 0f;
+        while (true)
+        {
+            t += Time.unscaledDeltaTime * 2f;
+            float target = Mathf.Lerp(hintMinAlpha, hintMaxAlpha, (Mathf.Sin(t) + 1f) * 0.5f);
+            SetHintAlpha(Mathf.MoveTowards(clickHint.color.a, target, Time.unscaledDeltaTime * 3f));
+            yield return null;
+        }
     }
 
     void EndDialogue()
     {
+        HideHint();
         dialoguePanel.SetActive(false);
         OnDialogueEnded?.Invoke();
         onComplete?.Invoke();

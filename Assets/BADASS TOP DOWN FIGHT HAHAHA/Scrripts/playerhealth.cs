@@ -27,6 +27,7 @@ public class playerhealth : MonoBehaviour, IDamageable
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             endscreen.SetActive(true);
+            gameObject.SetActive(false);
             return;
         }
 
