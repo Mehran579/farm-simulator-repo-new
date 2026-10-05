@@ -15,6 +15,11 @@ MonoBehaviour:
   lines:
   - speaker: Edmund Chamar
     portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
+    text: "By decree of the Crown and by order of the King\u2019s Court, thou art
+      hereby commanded to take up arms and join the Kingdom\u2019s host in the War
+      of the Carrot Seeds. Thou shalt present thyself for conscription without delay.\r\n"
+  - speaker: Edmund Chamar
+    portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
     text: "Could it be\u2026? Am I truly the long-forgotten legendary hero, reborn
       after a century to save this kingdom from the calamities that plague it, and
       usher in an age of prosperity, just as the prophecy foretold upon my predecessor\u2019s
@@ -31,7 +36,7 @@ MonoBehaviour:
       I knew this day would come."
   - speaker: Ser Render
     portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
-    text: "Nah. We\u2019re simply short on soldiers. Nothing else you whoopass"
+    text: "Nah. We\u2019re simply short on soldiers. Nothing else you whoopass -_-"
   - speaker: Edmund Chamar
     portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
     text: If that's so, then why only me?
@@ -42,6 +47,3 @@ MonoBehaviour:
   - speaker: Edmund Chamar
     portrait: {fileID: -984164299818982976, guid: 1caf50aa47e18214b94fb3ee8bee0004, type: 3}
     text: '*whispers ( I hate this story T~T )'
-  - speaker: Ser Render
-    portrait: {fileID: -7330891917748599510, guid: 84936dcaff62c7e42b8507b56fd82b8e, type: 3}
-    text: Quit blabbering, let's go to the war!!!!

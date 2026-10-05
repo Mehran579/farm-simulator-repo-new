@@ -47,9 +47,12 @@ public class Door_House : MonoBehaviour
 
         collision.transform.position = toSpawnPos.position;
 
+        yield return new WaitForSeconds(cinematicPuase);
+
         yield return StartCoroutine(screenFade.FadeFromBlack());
 
         PlayerManager.canMove = true;
         transitioning = false;
     }
+    public float cinematicPuase;
 }
