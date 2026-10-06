@@ -158,7 +158,7 @@ public class PlayerControlsFight : MonoBehaviour
             if (col.TryGetComponent<IDamageable>(out var target))
             {
                 target.TakeDamage(damage);
-                Debug.Log(col.name);
+                //Debug.Log(col.name);
                 HitStop.Do(hitStopDuration);
                 CameraShake.TriggerShake(shakeDuration, shakeMagnitude);
             }

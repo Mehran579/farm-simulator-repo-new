@@ -21,8 +21,7 @@ public class playerhealth : MonoBehaviour, IDamageable
         if (IsInvulnerable) return;
 
         health -= amount;
-        Debug.Log($"Player health: {health}");
-
+        
         if (health <= 0)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

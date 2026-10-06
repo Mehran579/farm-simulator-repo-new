@@ -130,7 +130,7 @@ public class DialogueManager : MonoBehaviour
 
     void ShowHint()
     {
-        Debug.Log($"ShowHint called. clickHint={clickHint}, limit={hintForFirstLines}, shown={linesShown}");
+
         if (clickHint == null) return;
         if (hintForFirstLines > 0 && linesShown > hintForFirstLines) return;
         if (hintRoutine != null) StopCoroutine(hintRoutine);
