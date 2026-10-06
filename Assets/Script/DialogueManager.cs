@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
     void Reset()
     {
         advance = new InputAction("Advance", InputActionType.Button);
-        advance.AddBinding("<Keyboard>/e");
+        advance.AddBinding("<Keyboard>/enter");
         advance.AddBinding("<Mouse>/leftButton");
         advance.AddBinding("<Gamepad>/buttonSouth");
     }
@@ -130,6 +130,7 @@ public class DialogueManager : MonoBehaviour
 
     void ShowHint()
     {
+        Debug.Log($"ShowHint called. clickHint={clickHint}, limit={hintForFirstLines}, shown={linesShown}");
         if (clickHint == null) return;
         if (hintForFirstLines > 0 && linesShown > hintForFirstLines) return;
         if (hintRoutine != null) StopCoroutine(hintRoutine);

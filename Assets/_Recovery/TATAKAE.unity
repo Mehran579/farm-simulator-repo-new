@@ -2149,7 +2149,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 554095431
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 236
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 731185d945476b0428cb2c0c996f9b98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9293,7 +9293,7 @@ MonoBehaviour:
   hitboxRadius: 0.7
   windupTime: 0.08
   activeTime: 0.1
-  recoveryTime: 0.2
+  recoveryTime: 0.3
   hittableLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -10977,7 +10977,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1456429467
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 26
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7304333297647617550, guid: 52f26fbb90cfcbc419af3334c2ac7c94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11016,7 +11016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: cbbb6352606108348a4a406af288f9e5, type: 3}
       propertyPath: m_SortingOrder
-      value: 14
+      value: 288
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: cbbb6352606108348a4a406af288f9e5, type: 3}
       propertyPath: m_SortingLayerID
