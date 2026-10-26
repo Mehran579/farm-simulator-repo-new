@@ -24,6 +24,7 @@ public class nEMEMYMANAGE : MonoBehaviour
 
         //Debug.Log("all waves cleared");
         winEnd.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
     }
     public GameObject winEnd;
     IEnumerator SpawnWave(WAVE wave)

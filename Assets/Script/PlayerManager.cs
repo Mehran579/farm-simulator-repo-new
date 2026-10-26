@@ -102,8 +102,12 @@ public class PlayerManager : MonoBehaviour
 
         rb.position = fatherPosition.position;
         exclamatipon.SetActive(false);
-        DialogueManager.Instance.StartDialogue(fatherDialogue1);
+        DialogueManager.Instance.StartDialogue(fatherDialogue1, () =>
+        {
+            carrotseedsexclamation.SetActive(true);
+        });
     }
+    public GameObject carrotseedsexclamation;
     //private void Start()
     //{
     //    TEMPmarketDoor.StartCoroutine(TEMPmarketDoor.ChangeLevel(GetComponent<Collider2D>()));

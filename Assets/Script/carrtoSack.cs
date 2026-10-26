@@ -31,6 +31,8 @@ public class CarrotSack : MonoBehaviour
             {
                 PlayerManager.hasCarrotSeeds = true;
                 carrotSeeds.SetActive(true);
+                carrotseedsexclamatipn.SetActive(false);
+
             });
         }
         else
@@ -38,6 +40,7 @@ public class CarrotSack : MonoBehaviour
             DialogueManager.Instance.StartDialogue(d2);
         }
     }
+    public GameObject carrotseedsexclamatipn;
 
     void OnTriggerEnter2D(Collider2D collision)
     {

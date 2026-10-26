@@ -35,7 +35,8 @@ public class level4Manager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DialogueManager.Instance.StartDialogue(player1stline, () =>
         {
-            Camera.main.GetComponent<Camera>().orthographicSize += 2.2f;
+            // Camera.main.GetComponent<Camera>().orthographicSize += 2.2f;
+            StartCoroutine(SmoothZoom());
             foreach (GameObject g in todisable)
                 g.SetActive(false);
 
@@ -46,6 +47,22 @@ public class level4Manager : MonoBehaviour
 
             Invoke(nameof(lastdiaglouge), 0.2f);
         });
+    }
+    IEnumerator SmoothZoom()
+    {
+        float startSize = Camera.main.orthographicSize;
+        float elapsed = 0f;
+
+        while (elapsed < 0.8f)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / 0.8f;
+            t = t * t * (3f - 2f * t);
+            Camera.main.orthographicSize = Mathf.Lerp(startSize, startSize + 2.2f, t);
+            yield return null;
+        }
+
+        Camera.main.orthographicSize = startSize + 2.2f;
     }
     public DialogueData player1stline;
 

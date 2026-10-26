@@ -171,5 +171,16 @@ public class PlayerControlsFight : MonoBehaviour
         Vector2 dir = mouseWorld - rb.position;
         return dir.sqrMagnitude > 0.01f ? dir.normalized : lastMoveDir;
     }
+    void OnDrawGizmosSelected()
+    {
+        Vector2 aim = Application.isPlaying
+            ? GetAimDirection()
+            : (Vector2)transform.right;
 
+        Vector2 center = (Application.isPlaying && rb != null ? rb.position : (Vector2)transform.position)
+                 + aim * hitboxDistance;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(center, hitboxRadius);
+    }
 }

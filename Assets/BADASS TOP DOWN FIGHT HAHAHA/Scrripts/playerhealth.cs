@@ -19,12 +19,14 @@ public class playerhealth : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         if (IsInvulnerable) return;
+        Debug.Log("Boss health: " + health);
 
         health -= amount;
         
         if (health <= 0)
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if(endscreen!= null)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             endscreen.SetActive(true);
             gameObject.SetActive(false);
             return;
