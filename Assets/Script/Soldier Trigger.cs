@@ -11,6 +11,8 @@ public class SoldierTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player") && PlayerManager.hasTalkedToBiblicallyAccurateAngel)
         {
+            AudioManager.Play(SFX.SoldiersArrive);
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(Music.MarketTense, 0.5f);
             //Debug.Log("Triggered");
             CameraShake.TriggerShake(0.5f, 0.5f);
             collision.GetComponent<PlayerManager>().currentState = PlayerManager.PlayerState.Cutscene;
@@ -59,6 +61,7 @@ public class SoldierTrigger : MonoBehaviour
     public Collider2D player;
     void setExclampationtoAcive()
     {
+        AudioManager.Play(SFX.ExclamationPop);
         foreach (GameObject exclampation in newExclampations)
         {
             exclampation.SetActive(true);

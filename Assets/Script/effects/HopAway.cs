@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HopAway : MonoBehaviour
 {
+    public bool playHopSound = true;
     public float hopDistance = 1f;
     public float hopHeight = 0.5f;
     public float hopDuration = 0.3f;
@@ -17,6 +18,7 @@ public class HopAway : MonoBehaviour
     {
         for (int i = 0; i < numberOfHops; i++)
         {
+            if (playHopSound) AudioManager.Play(SFX.ArmorClank);
             Vector3 startPos = transform.position;
             Vector3 endPos = startPos + Vector3.right * hopDistance;
             float time = 0;

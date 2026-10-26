@@ -25,6 +25,8 @@ public class playerhealth : MonoBehaviour, IDamageable
         
         if (health <= 0)
         {
+            AudioManager.Play(SFX.PlayerDeath);
+            if (AudioManager.Instance != null) AudioManager.Play(SFX.GameOver);; // Note: Music.GameOver doesn't exist in AudioManager.cs
             if(endscreen!= null)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             endscreen.SetActive(true);
@@ -33,6 +35,7 @@ public class playerhealth : MonoBehaviour, IDamageable
         }
 
         invulnUntil = Time.time + invulnDuration;
+        AudioManager.Play(SFX.PlayerHurt);
         flash.Blink(invulnDuration, blinkInterval);
 
         HitStop.Do(0.05f);
@@ -44,6 +47,7 @@ public class playerhealth : MonoBehaviour, IDamageable
     }
     public void OnresterT()
     {
+        AudioManager.Play(SFX.UIClick);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

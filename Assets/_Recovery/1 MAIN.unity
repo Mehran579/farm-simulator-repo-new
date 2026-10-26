@@ -5826,6 +5826,9 @@ MonoBehaviour:
   nextLevel: {fileID: 1089231316}
   currentLevel: {fileID: 2049749210}
   screenFade: {fileID: 205254559}
+  nextMusic: 5
+  setFootstep: 0
+  nextFootstep: 0
   cinematicPuase: 0.5
 --- !u!1 &83542195
 GameObject:
@@ -8253,6 +8256,9 @@ MonoBehaviour:
   nextLevel: {fileID: 1136212633}
   currentLevel: {fileID: 928342757}
   screenFade: {fileID: 205254559}
+  nextMusic: 2
+  setFootstep: 0
+  nextFootstep: 0
   cinematicPuase: 0
 --- !u!61 &176691727
 BoxCollider2D:
@@ -10417,6 +10423,9 @@ MonoBehaviour:
   nextLevel: {fileID: 2049749210}
   currentLevel: {fileID: 1136212633}
   screenFade: {fileID: 205254559}
+  nextMusic: 3
+  setFootstep: 0
+  nextFootstep: 0
   cinematicPuase: 0
 --- !u!61 &328082595
 BoxCollider2D:
@@ -14559,6 +14568,7 @@ MonoBehaviour:
   MoveSpeed: 6
   currentState: 0
   currentCutSceneState: 0
+  footstep: 5
   carrotseed: {fileID: 8872466559722012008, guid: b0be49aa25d6fa347925494c68222424, type: 3}
   fatherPosition: {fileID: 1315738944}
   exclamatipon: {fileID: 286976779}
@@ -96791,6 +96801,171 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1849674512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849674514}
+  - component: {fileID: 1849674513}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1849674513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849674512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f41adc2d48c024cae5467cef9949d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  musicSource: {fileID: 0}
+  tracks:
+  - id: 1
+    clip: {fileID: 8300000, guid: 2644f2c531f772644a43dbde0bba13a4, type: 3}
+    volume: 0.14
+  - id: 2
+    clip: {fileID: 8300000, guid: bff738701734bf64c98a77b3a009b18e, type: 3}
+    volume: 0.14
+  - id: 3
+    clip: {fileID: 8300000, guid: dc9c3ee48c4034d4abfa681071648bea, type: 3}
+    volume: 0.28
+  - id: 4
+    clip: {fileID: 8300000, guid: a225e324127f81d4881b55956c1069b9, type: 3}
+    volume: 0.084
+  - id: 5
+    clip: {fileID: 8300000, guid: 795f76126569268408d2076a44058512, type: 3}
+    volume: 0.194
+  - id: 6
+    clip: {fileID: 8300000, guid: 2cd2981267fd60c42badd4b55507cfd4, type: 3}
+    volume: 0.194
+  - id: 7
+    clip: {fileID: 8300000, guid: 1ad2c048eea14184cb4a6a373b950155, type: 3}
+    volume: 0.194
+  playStartingTrack: 1
+  startingTrack: 1
+  musicVolume: 0.5
+  defaultFadeTime: 0.3
+  sfxVolume: 1
+  voices: 12
+  sounds:
+  - id: 0
+    clips:
+    - {fileID: 8300000, guid: 68d636744d415884fafcf31c1274ef90, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 2
+    clips:
+    - {fileID: 8300000, guid: 4d28233d02742ed4e9983320b975cf73, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 3
+    clips:
+    - {fileID: 8300000, guid: 8637d000552be634e9427d0a764e0be1, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 9
+    clips:
+    - {fileID: 8300000, guid: 4e2bb93a7cffc16429b398853faa9461, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 11
+    clips:
+    - {fileID: 8300000, guid: 2386b302abd3ca8478d9f573c5132145, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 12
+    clips:
+    - {fileID: 8300000, guid: c35e4ada7f964684c99c28540970af39, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 13
+    clips:
+    - {fileID: 8300000, guid: 3633c1aa0d904fb4aa65f18508d54806, type: 3}
+    volume: 0.135
+    pitchVariation: 0
+    minInterval: 0
+  - id: 14
+    clips:
+    - {fileID: 8300000, guid: 2db6385cdab927349b9a0467d9cfb3a6, type: 3}
+    volume: 0.1
+    pitchVariation: 0
+    minInterval: 0
+  - id: 15
+    clips:
+    - {fileID: 8300000, guid: 64ff8ee635f9f134ab2f3b45b86a1c71, type: 3}
+    volume: 0.08
+    pitchVariation: 0
+    minInterval: 0
+  - id: 16
+    clips:
+    - {fileID: 8300000, guid: 64ff8ee635f9f134ab2f3b45b86a1c71, type: 3}
+    volume: 0.15
+    pitchVariation: 0
+    minInterval: 0
+  - id: 17
+    clips:
+    - {fileID: 8300000, guid: 64ff8ee635f9f134ab2f3b45b86a1c71, type: 3}
+    volume: 0.3
+    pitchVariation: 0
+    minInterval: 0
+  - id: 18
+    clips:
+    - {fileID: 8300000, guid: d560525ecbd52e546befdc01cb4bbd63, type: 3}
+    volume: 0.12
+    pitchVariation: 0
+    minInterval: 0
+  - id: 19
+    clips:
+    - {fileID: 8300000, guid: a4922dcf4c48c1949804f570cd223cc3, type: 3}
+    volume: 0.3
+    pitchVariation: 0
+    minInterval: 0
+  - id: 20
+    clips:
+    - {fileID: 8300000, guid: 27acb2bcc5618af488a3779293000a35, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 20
+    clips:
+    - {fileID: 8300000, guid: 27acb2bcc5618af488a3779293000a35, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  lastSceneBuildIndex: 2
+--- !u!4 &1849674514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849674512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5977, y: -0.03543, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850805769
 GameObject:
   m_ObjectHideFlags: 0
@@ -104573,3 +104748,4 @@ SceneRoots:
   - {fileID: 1136212634}
   - {fileID: 2049749211}
   - {fileID: 1089231317}
+  - {fileID: 1849674514}

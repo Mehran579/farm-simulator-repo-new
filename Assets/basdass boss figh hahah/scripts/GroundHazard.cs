@@ -33,9 +33,11 @@ public class GroundHazard : MonoBehaviour
         hitbox.enabled = false;
 
         yield return new WaitForSeconds(shadowDelay);
+        AudioManager.Play(SFX.HazardWarning);
         shadow.SetActive(true);
 
         yield return new WaitForSeconds(telegraphTime);
+        AudioManager.Play(SFX.HazardSpike);
         damageVisual.SetActive(true);   // drawn on top of the shadow, which stays
         hitbox.enabled = true;          // damage starts at the same moment the visual appears
         active = true;

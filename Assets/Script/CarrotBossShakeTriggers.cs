@@ -8,24 +8,30 @@ public class CarrotBossShakeTriggers : MonoBehaviour
     public GameObject shockWave;
     void firstShake()
     {
+        AudioManager.Play(SFX.Rumble1);
         CameraShake.TriggerShake(duration: 0.1f, magnitude: 0.1f);
     }
     void secondShake()
     {
+        AudioManager.Play(SFX.Rumble2);
         CameraShake.TriggerShake(duration: 0.2f, magnitude: 0.2f);
     }
     void thirdshake()
     {
+        AudioManager.Play(SFX.Rumble3);
         CameraShake.TriggerShake(duration: 0.3f, magnitude: 0.3f);
     }
     void BossAwake()
     {
+        AudioManager.Play(SFX.BossEmerge);
+        AudioManager.Play(SFX.BossSting);
         boss.SetActive(true);
         StartCoroutine(ScaleUpBoss(boss, Vector3.zero, Vector3.one));
         Invoke(nameof(lastShake), 0.5f);
     }
     void lastShake()
     {
+        AudioManager.Play(SFX.ShockwaveBoom);
         CameraShake.TriggerShake(duration: 0.5f, magnitude: 1f);
         StartCoroutine(ScaleUp(shockWave));
         DestroyGrassEtc();
@@ -55,8 +61,9 @@ public class CarrotBossShakeTriggers : MonoBehaviour
         Destroy(obj, 3f);
 
 
-        DialogueManager.Instance.StartDialogue(bossDialogue, () => 
-        { 
+        DialogueManager.Instance.StartDialogue(bossDialogue, () =>
+        {
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(Music.Farm, 2f);
             StartCoroutine(ScaleUpBoss(boss, Vector3.one, Vector3.zero));
             //Invoke(nameof(playanimationInreverse), 0f);
             GetComponent<Animator>().SetTrigger("reverse");
@@ -107,6 +114,7 @@ public class CarrotBossShakeTriggers : MonoBehaviour
 
     private void DestroyGrassEtc()
     {
+        AudioManager.Play(SFX.GrassCrunch);
         GameObject[] grass = GameObject.FindGameObjectsWithTag("grass");
 
         foreach (GameObject g in grass)

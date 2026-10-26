@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class KnightsHopAway : MonoBehaviour
 {
+    public bool playHopSound = true;
     public Transform destination;
 
     public float hopHeight = 0.5f;
@@ -16,6 +17,7 @@ public class KnightsHopAway : MonoBehaviour
 
     IEnumerator Hop()
     {
+        if (playHopSound) AudioManager.Play(SFX.ArmorClank);
         Vector3 startPosition = transform.localPosition;
 
         Vector3 destinationPosition = transform.parent.InverseTransformPoint(destination.position);

@@ -70,6 +70,7 @@ public class BossProjectile : MonoBehaviour, IDamageable
         }
 
         reflected = true;
+        AudioManager.Play(SFX.ReflectClang);
         homingTarget = null;
         speed = reflectSpeed;
         direction = ((Vector2)boss.transform.position - (Vector2)transform.position).normalized;
@@ -78,6 +79,7 @@ public class BossProjectile : MonoBehaviour, IDamageable
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!launched) return;
+        AudioManager.Play(SFX.MissileExplode);
 
         // After a reflect it can only hurt the boss, never the player
         if (reflected)

@@ -7,7 +7,9 @@ public class bossfightstart : MonoBehaviour
     public Transform bossspawn;
     public void spawnbos()
     {
-        Debug.Log("called");    
+        AudioManager.Play(SFX.BossRoar);
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(Music.Boss, 1f);
+        Debug.Log("called");
         if(boss==null)
             Instantiate(bossPrefab,bossspawn.position,Quaternion.identity);
     }

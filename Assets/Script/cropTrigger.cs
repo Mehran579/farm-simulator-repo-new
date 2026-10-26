@@ -18,6 +18,7 @@ public class cropTrigger : MonoBehaviour
         if (PlayerManager.hasCarrotSeeds && !hasplaced && Keyboard.current.leftShiftKey.isPressed)
         {
             Instantiate(carrotSeed, new Vector3(transform.position.x - 0.03112f, transform.position.y - 0.55f, 0) + (Random.onUnitSphere * 0.03f), Quaternion.identity);
+            AudioManager.Play(SFX.SeedPlant);
             //Debug.Log("fuhhhhhhhhhh nuh");
             hasplaced = true;
             if (isBossTrigger)
@@ -38,6 +39,8 @@ public class cropTrigger : MonoBehaviour
     //}
     void startbossSequence(GameObject Player)
     {
+        AudioManager.Play(SFX.BossKnockback);
+        if (AudioManager.Instance != null) AudioManager.Instance.StopMusic(0.5f);
         Rigidbody2D rb = Player.GetComponent<Rigidbody2D>();
         PlayerManager pm = Player.GetComponent<PlayerManager>();
         pm.currentState = PlayerManager.PlayerState.knockback;

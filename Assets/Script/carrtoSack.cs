@@ -30,6 +30,7 @@ public class CarrotSack : MonoBehaviour
             DialogueManager.Instance.StartDialogue(d1, () =>
             {
                 PlayerManager.hasCarrotSeeds = true;
+                AudioManager.Play(SFX.SeedPickup);
                 carrotSeeds.SetActive(true);
                 carrotseedsexclamatipn.SetActive(false);
 

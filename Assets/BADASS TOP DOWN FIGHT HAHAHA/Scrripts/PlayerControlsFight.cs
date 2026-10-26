@@ -100,6 +100,7 @@ public class PlayerControlsFight : MonoBehaviour
 
     IEnumerator DashRoutine()
     {
+        AudioManager.Play(SFX.Dash);
         canDash = false;
         StartCoroutine(DashCooldown());
 
@@ -122,6 +123,7 @@ public class PlayerControlsFight : MonoBehaviour
     IEnumerator AttackRoutine()
     {
         isAttacking = true;
+        AudioManager.Play(SFX.SwordSwing);
         Vector2 aim = GetAimDirection();
         float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
         attackSprite.localRotation = Quaternion.Euler(0f, 0f, angle);
@@ -158,6 +160,7 @@ public class PlayerControlsFight : MonoBehaviour
             if (col.TryGetComponent<IDamageable>(out var target))
             {
                 target.TakeDamage(damage);
+                AudioManager.Play(SFX.SwordHit);
                 //Debug.Log(col.name);
                 HitStop.Do(hitStopDuration);
                 CameraShake.TriggerShake(shakeDuration, shakeMagnitude);

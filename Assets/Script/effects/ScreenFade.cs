@@ -16,6 +16,7 @@ public class ScreenFade : MonoBehaviour
 
     public IEnumerator FadeToBlack()
     {
+        AudioManager.Play(SFX.FadeWhoosh);
         float time = 0f;
 
         while (time < fadeDuration)

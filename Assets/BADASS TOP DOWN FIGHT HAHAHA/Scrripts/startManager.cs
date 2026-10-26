@@ -23,6 +23,7 @@ public class startManager : MonoBehaviour
     {
         if (!canstart)
             return;
+        AudioManager.Play(SFX.UIClick);
         secondstatpane.SetActive(true);
         firststartpanel.SetActive(false);
         canstart = false;
@@ -32,6 +33,8 @@ public class startManager : MonoBehaviour
     {
         if (!canstart)
             return;
+        AudioManager.Play(SFX.UIClick);
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(Music.Battle);
         secondstatpane.SetActive(false);
         game.SetActive(true);
 
@@ -47,7 +50,8 @@ public class startManager : MonoBehaviour
     }
     public void OnClickSkip()
     {
-        fightStartTime = -1f; 
+        AudioManager.Play(SFX.UIClick);
+        fightStartTime = -1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public GameObject game;

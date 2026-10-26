@@ -71,6 +71,7 @@ public class level4Manager : MonoBehaviour
     public float radius = 3f;
     public void SpawnEnemiesAround(float amount, float raidus)
     {
+        AudioManager.Play(SFX.KnightSpawn);
         float offset = Random.Range(0f, 360f);
         for (int i = 0; i < amount; i++)
         {

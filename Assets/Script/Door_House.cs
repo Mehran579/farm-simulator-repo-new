@@ -10,6 +10,10 @@ public class Door_House : MonoBehaviour
     public GameObject currentLevel;
     public ScreenFade screenFade;
 
+    public Music nextMusic;
+    public bool setFootstep;
+    public SFX nextFootstep;
+
     private bool transitioning;
 
     void Start()
@@ -30,6 +34,7 @@ public class Door_House : MonoBehaviour
     public IEnumerator ChangeLevel(Collider2D collision)
     {
         transitioning = true;
+        AudioManager.Play(SFX.DoorOpen);
         PlayerManager.canMove = false;
 
         yield return StartCoroutine(screenFade.FadeToBlack());
@@ -46,6 +51,13 @@ public class Door_House : MonoBehaviour
         oldcam.gameObject.SetActive(false);
 
         collision.transform.position = toSpawnPos.position;
+
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(nextMusic);
+        if (setFootstep)
+        {
+            PlayerManager pm = collision.GetComponent<PlayerManager>();
+            if (pm != null) pm.footstep = nextFootstep;
+        }
 
         yield return new WaitForSeconds(cinematicPuase);
 

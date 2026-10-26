@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (col.gameObject.TryGetComponent<IDamageable>(out var target))
         {
+            AudioManager.Play(SFX.EnemyAttack);
             target.TakeDamage(contactDamage);
             nextHitTime = Time.time + contactCooldown;
         }
@@ -68,7 +69,15 @@ public class Enemy : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         health -= amount;
-        if (health <= 0) Destroy(gameObject);
-        else if (hitFlash != null) hitFlash.Flash();
+        if (health <= 0)
+        {
+            AudioManager.Play(SFX.EnemyDeath);
+            Destroy(gameObject);
+        }
+        else
+        {
+            AudioManager.Play(SFX.EnemyHit);
+            if (hitFlash != null) hitFlash.Flash();
+        }
     }
 }

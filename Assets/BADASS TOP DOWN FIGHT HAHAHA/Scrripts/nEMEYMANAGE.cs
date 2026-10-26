@@ -18,11 +18,13 @@ public class nEMEMYMANAGE : MonoBehaviour
         foreach (WAVE wave in waves)
         {
             yield return StartCoroutine(SpawnWave(wave));
+            AudioManager.Play(SFX.WaveCleared);
             yield return new WaitUntil(AllEnemiesDead);
             yield return new WaitForSeconds(timeBetweenWaves);
         }
 
         //Debug.Log("all waves cleared");
+        AudioManager.Play(SFX.Victory);
         winEnd.SetActive(true);
         yield return new WaitForSeconds(0.5f);
     }
@@ -38,6 +40,7 @@ public class nEMEMYMANAGE : MonoBehaviour
 
                 Vector2 pos = (Vector2)player.position + direction * distance;
                 Enemy e = Instantiate(group.enemyPrefab, pos, Quaternion.identity);
+                AudioManager.Play(SFX.EnemySpawn);
                 e.Init(targets);
                 aliveEnemies.Add(e);
 

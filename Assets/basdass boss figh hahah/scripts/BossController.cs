@@ -99,6 +99,7 @@ public class BossController : MonoBehaviour, IDamageable
         // Phase 1: missiles appear one by one on a ring around the boss (not launched, so no damage yet)
         for (int i = 0; i < count; i++)
         {
+            AudioManager.Play(SFX.MissileLaunch);
             BossProjectile m = Instantiate(missilePrefab, transform.position, Quaternion.identity);
             heldMissiles.Add(m);
             PlaceRing(startAngle, count);
@@ -141,6 +142,7 @@ public class BossController : MonoBehaviour, IDamageable
     // ------------------------------------------------------------ Attack 2
     IEnumerator AimedShot()
     {
+        AudioManager.Play(SFX.ShotCharge);
         heldShot = Instantiate(shotPrefab, transform.position, Quaternion.identity);
         Vector2 dir = Vector2.right;
 
@@ -164,12 +166,14 @@ public class BossController : MonoBehaviour, IDamageable
 
             // grow while being held
             heldShot.transform.localScale = Vector3.Lerp(fullScale * shotStartScale, fullScale, timer / total);
+            if (timer < aim + 0.01f && timer > aim - 0.01f) AudioManager.Play(SFX.ShotLock);
 
             timer += Time.deltaTime;
             yield return null;
         }
 
         heldShot.transform.localScale = fullScale;
+        AudioManager.Play(SFX.ShotLaunch);
         heldShot.Launch(dir, shotSpeed * ProjSpeed, shotLifetime);
         heldShot = null;
     }
@@ -202,6 +206,7 @@ public class BossController : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         health -= amount;
+        if (health > 0) AudioManager.Play(SFX.BossHurt);
 
         if (!enraged && health > 0 && health <= maxHealth * enrageAtHealth)
             enraged = true;
@@ -211,6 +216,7 @@ public class BossController : MonoBehaviour, IDamageable
 
     void Die()
     {
+        AudioManager.Play(SFX.BossDeath);
         Destroy(gameObject);   // add death effects / tell your spawner script here
     }
 

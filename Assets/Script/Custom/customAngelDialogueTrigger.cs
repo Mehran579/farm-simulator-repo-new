@@ -29,6 +29,8 @@ public class customAngelDialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        AudioManager.Play(SFX.AngelChime);
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(Music.Angel, 1f);
         DialogueManager.Instance.StartDialogue(dialogue, () =>
         {
             StartCoroutine(flash());
@@ -58,6 +60,7 @@ public class customAngelDialogueTrigger : MonoBehaviour
         {
             item.enabled = false;
         }
+        AudioManager.Play(SFX.AngelVanish);
         angelhoppinaway.StartHopping();
 
         for (int i = 0; i < Npc.Length; i++)
@@ -72,6 +75,7 @@ public class customAngelDialogueTrigger : MonoBehaviour
         
         DialogueManager.Instance.StartDialogue(angeld3, () =>
         {
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayMusic(Music.Market, 1.5f);
             PlayerManager.hasTalkedToBiblicallyAccurateAngel = true;
             PlayerManager.canMove = true;
             GetComponent<Collider2D>().enabled = false;

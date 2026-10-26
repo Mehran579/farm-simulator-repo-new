@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour
 
         if (advance.WasPressedThisFrame())
         {
+            AudioManager.Play(SFX.DialogueAdvance);
             if (isTyping)
             {
                 StopCoroutine(typing);
@@ -83,6 +84,7 @@ public class DialogueManager : MonoBehaviour
         lines.Clear();
         foreach (var line in data.lines) lines.Enqueue(line);
         dialoguePanel.SetActive(true);
+        AudioManager.Play(SFX.DialogueOpen);
         OnDialogueStarted?.Invoke();
         ShowNextLine();
     }
@@ -111,9 +113,12 @@ public class DialogueManager : MonoBehaviour
     {
         isTyping = true;
         bodyText.text = "";
+        int charCount = 0;
         foreach (char c in text)
         {
             bodyText.text += c;
+            if (c != ' ' && charCount % 2 == 1) AudioManager.Play(SFX.DialogueBlip);
+            if (c != ' ') charCount++;
             yield return new WaitForSeconds(typeSpeed);
         }
         isTyping = false;
@@ -162,6 +167,7 @@ public class DialogueManager : MonoBehaviour
     {
         HideHint();
         dialoguePanel.SetActive(false);
+        AudioManager.Play(SFX.DialogueClose);
         OnDialogueEnded?.Invoke();
         onComplete?.Invoke();
     }

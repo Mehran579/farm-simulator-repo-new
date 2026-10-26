@@ -15,6 +15,9 @@ public class PlayerManager : MonoBehaviour
     public enum CutSceneState { GoToFather };
     public CutSceneState currentCutSceneState;
 
+    public SFX footstep = SFX.FootstepWood;
+    float footstepTimer = 0.35f;
+
     public static bool hasCarrotSeeds;
     public GameObject carrotseed;
 
@@ -55,6 +58,19 @@ public class PlayerManager : MonoBehaviour
                 if (canMove)
                 {
                     rb.linearVelocity = MoveInput * MoveSpeed;
+                    if (MoveInput.magnitude > 0.1f)
+                    {
+                        footstepTimer -= Time.fixedDeltaTime;
+                        if (footstepTimer <= 0f)
+                        {
+                            AudioManager.Play(footstep);
+                            footstepTimer = 0.35f;
+                        }
+                    }
+                    else
+                    {
+                        footstepTimer = 0.35f;
+                    }
                 }
                 break;
 
@@ -102,9 +118,11 @@ public class PlayerManager : MonoBehaviour
 
         rb.position = fatherPosition.position;
         exclamatipon.SetActive(false);
+        AudioManager.Play(SFX.ExclamationPop);
         DialogueManager.Instance.StartDialogue(fatherDialogue1, () =>
         {
             carrotseedsexclamation.SetActive(true);
+            AudioManager.Play(SFX.ExclamationPop);
         });
     }
     public GameObject carrotseedsexclamation;

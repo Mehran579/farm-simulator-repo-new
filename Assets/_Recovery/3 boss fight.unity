@@ -10195,8 +10195,8 @@ MonoBehaviour:
   dashCooldown: 0.5
   dashInvulnTime: 0.3
   damage: 1
-  hitboxDistance: 0.9
-  hitboxRadius: 0.7
+  hitboxDistance: 1
+  hitboxRadius: 0.81
   windupTime: 0.08
   activeTime: 0.1
   recoveryTime: 0.3
