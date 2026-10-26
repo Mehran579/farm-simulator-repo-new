@@ -7,6 +7,7 @@ public class BossController : MonoBehaviour, IDamageable
     [Header("Health")]
     [SerializeField] int maxHealth = 100;
     public int Health => health;
+    public bool IsDead => dead;
 
     [Header("Enrage")]
     [SerializeField, Range(0f, 1f)] float enrageAtHealth = 0.75f;   // health fraction that triggers enrage
@@ -274,6 +275,15 @@ public class BossController : MonoBehaviour, IDamageable
         heldMissiles.Clear();
         heldShot = null;
 
+        // clear anything already fired so nothing hurts the player during the dialogue
+        foreach (var p in FindObjectsByType<BossProjectile>(FindObjectsSortMode.None))
+            if (p) Destroy(p.gameObject);
+        foreach (var h in FindObjectsByType<GroundHazard>(FindObjectsSortMode.None))
+            if (h) Destroy(h.gameObject);
+
+        // StartDialogue refuses to open while another dialogue is showing
+        if (DialogueManager.Instance != null) DialogueManager.Instance.ForceClose();
+
         AudioManager.Play(SFX.BossDeath);
 
         if (spriteRenderer != null && deadSprite != null)
@@ -328,8 +338,9 @@ public class BossController : MonoBehaviour, IDamageable
                     AudioManager.Play(SFX.Explosion);
                 }
 
-                yield return new WaitForSecondsRealtime(0.6f);
+                yield return new WaitForSecondsRealtime(frameShowTime);   // how long the frame stays up
                 img.SetActive(false);
+                yield return new WaitForSecondsRealtime(frameGapTime);    // blank pause before the next one
             }
         }
 
@@ -338,6 +349,9 @@ public class BossController : MonoBehaviour, IDamageable
         // SceneManager.LoadScene(...) or whatever comes next
     }
 
+    [Header("Final Cutscene Timing")]
+    public float frameShowTime = 1.5f;   // seconds each frame stays on screen
+    public float frameGapTime = 0.5f;    // seconds of nothing between frames
     public GameObject[] finalFrames;
 
     void OnDestroy()

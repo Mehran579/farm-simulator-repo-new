@@ -18,7 +18,9 @@ public class BossBarWaiter : MonoBehaviour
         group.alpha = 0f;      // hide the empty bar
     }
 
-    void Start()
+    // OnEnable (not Start) so the wait restarts if the bar is deactivated and re-activated
+    // by bossfightstart (hidden at scene start, shown when the fight begins).
+    void OnEnable()
     {
         StartCoroutine(WaitForBoss());
     }
@@ -36,8 +38,8 @@ public class BossBarWaiter : MonoBehaviour
         bar.enabled = true;    // its Start now runs with a valid boss
         group.alpha = 1f;
 
-        // hide the bar once the boss is gone
-        while (boss) yield return null;
+        // hide the bar once the boss is gone OR dead (the dead boss object is not destroyed)
+        while (boss && !boss.IsDead) yield return null;
         group.alpha = 0f;
     }
 }

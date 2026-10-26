@@ -171,4 +171,18 @@ public class DialogueManager : MonoBehaviour
         OnDialogueEnded?.Invoke();
         onComplete?.Invoke();
     }
+
+    // Closes the panel immediately WITHOUT running the pending callback.
+    // Used to skip straight to another dialogue (e.g. the boss death dialogue).
+    public void ForceClose()
+    {
+        if (!IsActive) return;
+        if (typing != null) StopCoroutine(typing);
+        isTyping = false;
+        lines.Clear();
+        onComplete = null;
+        HideHint();
+        dialoguePanel.SetActive(false);
+        OnDialogueEnded?.Invoke();
+    }
 }
