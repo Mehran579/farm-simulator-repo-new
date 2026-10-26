@@ -4892,6 +4892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -5682,6 +5683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -8612,6 +8614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -8822,6 +8825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -10368,6 +10372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -12129,6 +12134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -12270,6 +12276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -12625,6 +12632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -12830,6 +12838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 330837656}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -13041,6 +13050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -13178,7 +13188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 29e714b37c6a8d641ab6bbe176e2eedf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.367
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 29e714b37c6a8d641ab6bbe176e2eedf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13268,6 +13278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -13318,6 +13329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -15207,6 +15219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -15949,6 +15962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 544190436}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -16424,6 +16438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -16607,6 +16622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -18866,6 +18882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -20744,6 +20761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -22320,6 +22338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -23207,6 +23226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -23257,6 +23277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -23894,6 +23915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -24099,6 +24121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -24473,6 +24496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -24523,6 +24547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 1181401939}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -24664,6 +24689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -25146,6 +25172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -25551,6 +25578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -26049,6 +26077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 983176531}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -26718,6 +26747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -27479,6 +27509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -27529,6 +27560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -27956,6 +27988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -28234,6 +28267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -28284,6 +28318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -28334,6 +28369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 345698594}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -29290,6 +29326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -30518,6 +30555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -80692,6 +80730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -80742,6 +80781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -82094,6 +82134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -82301,6 +82342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -82351,6 +82393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -82432,6 +82475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -82895,6 +82939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -83100,6 +83145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -83150,6 +83196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -83200,6 +83247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -83450,6 +83498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -84926,6 +84975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -85054,6 +85104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -85196,6 +85247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -85246,6 +85298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 83542196}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -86184,6 +86237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -87187,6 +87241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -87574,6 +87629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -87624,6 +87680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -88153,6 +88210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -89588,6 +89646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -90689,6 +90748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -90739,6 +90799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -92107,6 +92168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -94183,6 +94245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -94224,7 +94287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.14038, y: -356.39844}
+  m_AnchoredPosition: {x: -29.140137, y: -356.39844}
   m_SizeDelta: {x: -685.609, y: -712.799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763104151
@@ -94835,6 +94898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -95413,6 +95477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -95463,6 +95528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -96944,9 +97010,125 @@ MonoBehaviour:
     volume: 0.14
     pitchVariation: 0
     minInterval: 0
-  - id: 20
+  - id: 21
     clips:
-    - {fileID: 8300000, guid: 27acb2bcc5618af488a3779293000a35, type: 3}
+    - {fileID: 8300000, guid: b14b4152c2d50314d9e55c448975b243, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 22
+    clips:
+    - {fileID: 8300000, guid: e36cd795d67205b4a8a2771a089ea9b8, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 24
+    clips:
+    - {fileID: 8300000, guid: c3e50d4f115c8f44cac87f1380582acd, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 29
+    clips:
+    - {fileID: 8300000, guid: 60affbba562c2df46b35d5cf4b81fffc, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 25
+    clips:
+    - {fileID: 8300000, guid: e38961cb9026c2b4a8048cfa35ed07ea, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 26
+    clips:
+    - {fileID: 8300000, guid: 157acf6e9d3789049a2f9de8b07408e9, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 27
+    clips:
+    - {fileID: 8300000, guid: c6cd98e409f996544a174f2446ce2f58, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 29
+    clips:
+    - {fileID: 8300000, guid: 60affbba562c2df46b35d5cf4b81fffc, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 30
+    clips:
+    - {fileID: 8300000, guid: 530b261e40f658747b7e4e626303e634, type: 3}
+    - {fileID: 8300000, guid: 48a65fedadeb35747b5ff1b1e23f87f8, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 31
+    clips:
+    - {fileID: 8300000, guid: a785617a746fd174b9a4e2981a8d88c9, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 32
+    clips:
+    - {fileID: 8300000, guid: ea2ce6c2c0f908543a96c2f6a6b6db49, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 33
+    clips:
+    - {fileID: 8300000, guid: 077b423b58c76a14da7eaee664a280be, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 34
+    clips:
+    - {fileID: 8300000, guid: a4922dcf4c48c1949804f570cd223cc3, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 35
+    clips:
+    - {fileID: 8300000, guid: d5f76368d7029bf42831da3f5bbe4f6a, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 36
+    clips:
+    - {fileID: 8300000, guid: fb1b228e5bbe58a42a72533a6a5e0f01, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 37
+    clips:
+    - {fileID: 8300000, guid: 112e1fdb151883e449fe74ea58e15cd6, type: 3}
+    - {fileID: 8300000, guid: 6c7820ff17521ee408ddd2d40ff824cd, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 38
+    clips:
+    - {fileID: 8300000, guid: 98f9e6f8743f7b744b64ffdd379b6b16, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 39
+    clips:
+    - {fileID: 8300000, guid: 9a7e55b3a8278244da3aa33d44bf1de5, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 40
+    clips:
+    - {fileID: 8300000, guid: 6a09219e52117a146b2ba7529fba509d, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 41
+    clips:
+    - {fileID: 8300000, guid: 6a09219e52117a146b2ba7529fba509d, type: 3}
     volume: 0.14
     pitchVariation: 0
     minInterval: 0
@@ -97258,6 +97440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -97308,6 +97491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -97519,6 +97703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -98702,6 +98887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e825a590bd763e6469ee01b5d4ddf390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnightsHopAway
+  playHopSound: 1
   destination: {fileID: 1496807289}
   hopHeight: 0.5
   hopDuration: 0.3
@@ -102261,6 +102447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -102466,6 +102653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -103244,6 +103432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -103364,6 +103553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -103728,6 +103918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -104631,6 +104822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HopAway
+  playHopSound: 1
   hopDistance: 0
   hopHeight: 0.5
   hopDuration: 0.3
@@ -104727,10 +104919,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab82383683860c4e8dceb0707b48097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playHopSound: 0
   hopDistance: 2
   hopHeight: 0.5
   hopDuration: 0.3
-  numberOfHops: 115
+  numberOfHops: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
