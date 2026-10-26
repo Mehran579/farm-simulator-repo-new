@@ -23,7 +23,7 @@ public enum SFX
     BossRoar, MissileLaunch, MissileExplode, ShotCharge, ShotLock, ShotLaunch,
     ReflectClang, HazardWarning, HazardSpike, BossHurt, BossDeath,
     // Stingers
-    BossSting, Victory, GameOver, AngelChime, AngelVanish
+    BossSting, Victory, GameOver, AngelChime, AngelVanish, PlaneFlying, Explosion
 }
 
 // None = "don't change the music". Handy as the default for a field that shows a dropdown in the Inspector.

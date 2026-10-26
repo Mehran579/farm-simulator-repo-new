@@ -78,6 +78,14 @@ MonoBehaviour:
   telegraphTime: 1.2
   stepDelay: 0.1
   hazardActiveTime: 0.4
+  deadSprite: {fileID: 6916101212937354488, guid: 135014df63deb3745987304d875c81a0, type: 3}
+  healthBar: {fileID: 0}
+  deathDialogue: {fileID: 11400000, guid: 147ee11726903e744b730549a1cf32da, type: 2}
+  spriteRenderer: {fileID: 8676119250454360615}
+  finalFrames:
+  - {fileID: 5731944008792739509, guid: b8777fda39806e647a1df1184fd6da71, type: 3}
+  - {fileID: 4987561482718990302, guid: a9c8b482b18684a42af4880421303ad1, type: 3}
+  - {fileID: 8100470412923783553, guid: 1a54b3eeb4f796d499a54bcf714f3b78, type: 3}
 --- !u!70 &7525137578997071363
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

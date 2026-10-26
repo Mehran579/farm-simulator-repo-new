@@ -49,9 +49,18 @@ public class BossController : MonoBehaviour, IDamageable
     [SerializeField] float stepDelay = 0.1f;           // delay between each hazard appearing along a line
     [SerializeField] float hazardActiveTime = 0.4f;
 
+    [Header("Death")]
+    public Sprite deadSprite;
+    public GameObject healthBar;
+    public DialogueData deathDialogue;
+    public SpriteRenderer spriteRenderer;
+
     int health;
     int lastAttack = -1;
     bool enraged;
+    bool fighting;                                     // attack loop already running
+    bool dead;                                         // death sequence has begun
+    Vector3 baseScale;
     Transform player;
     BossProjectile heldShot;                           // the shot currently hovering before launch
     List<BossProjectile> heldMissiles = new List<BossProjectile>();
@@ -59,11 +68,17 @@ public class BossController : MonoBehaviour, IDamageable
     float Speed => enraged ? enrageSpeedMultiplier : 1f;
     float ProjSpeed => enraged ? enrageProjectileSpeedMultiplier : 1f;
 
-    void Awake() { health = maxHealth; }
+    void Awake() { health = maxHealth; baseScale = transform.localScale; }
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;   // the boss gets spawned, so it can't have scene references
+    }
+
+    public void StartFight()
+    {
+        if (fighting || dead) return;                  // never start twice, never start after death
+        fighting = true;
         StartCoroutine(AttackLoop());
     }
 
@@ -205,20 +220,125 @@ public class BossController : MonoBehaviour, IDamageable
     // ------------------------------------------------------------ Health
     public void TakeDamage(int amount)
     {
+        if (dead) return;                              // ignore hits during/after death
         health -= amount;
         if (health > 0) AudioManager.Play(SFX.BossHurt);
 
         if (!enraged && health > 0 && health <= maxHealth * enrageAtHealth)
+        {
             enraged = true;
+            StartCoroutine(EnrageSequence());
+        }
 
         if (health <= 0) Die();
     }
 
-    void Die()
+    IEnumerator EnrageSequence()
     {
-        AudioManager.Play(SFX.BossDeath);
-        Destroy(gameObject);   // add death effects / tell your spawner script here
+        CameraShake.TriggerShake(0.5f, 0.5f);
+        Vector3 originalScale = transform.localScale;
+
+        // Quickly grow
+        float t = 0f;
+        while (t < 0.2f)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(originalScale, originalScale * 1.3f, t / 0.2f);
+            yield return null;
+        }
+
+        // Quickly shrink back and tint red
+        t = 0f;
+        if (spriteRenderer != null) spriteRenderer.color = Color.red;
+        while (t < 0.2f)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(originalScale * 1.3f, originalScale, t / 0.2f);
+            yield return null;
+        }
+        transform.localScale = originalScale;
     }
+
+    public void Die()
+    {
+        if (dead) return;                              // guards repeated hits / onclick.cs
+        dead = true;
+
+        StopAllCoroutines();                           // stops AttackLoop and any attack in progress
+        transform.localScale = baseScale;              // in case enrage animation was cut off
+
+        // remove projectiles that were being held but never launched
+        if (heldShot != null) Destroy(heldShot.gameObject);
+        foreach (BossProjectile m in heldMissiles)
+            if (m) Destroy(m.gameObject);
+        heldMissiles.Clear();
+        heldShot = null;
+
+        AudioManager.Play(SFX.BossDeath);
+
+        if (spriteRenderer != null && deadSprite != null)
+            spriteRenderer.sprite = deadSprite;
+
+        if (healthBar != null)
+        {
+            // Simulate health bar falling (simple way: disable it or let a separate animation handle it)
+            // For now, we'll just hide it to signal the end of the fight
+            healthBar.SetActive(false);
+        }
+
+        // Start the death sequence
+        StartCoroutine(DeathSequence());
+    }
+
+    IEnumerator DeathSequence()
+    {
+        // Initiate death dialogue
+        DialogueManager.Instance.StartDialogue(deathDialogue, () =>
+        {
+            StartCoroutine(FinalCutscene());
+        });
+        yield return null;
+    }
+
+    IEnumerator FinalCutscene()
+    {
+        // Fade screen and disable activity
+        ScreenFade sf = FindFirstObjectByType<ScreenFade>();
+        if (sf != null) yield return StartCoroutine(sf.FadeToBlack());
+
+        // First frame: Plane flying sound
+        AudioManager.Play(SFX.PlaneFlying);
+
+        // Disable all sounds and logic (pause game or disable components)
+        Time.timeScale = 0f;
+        AudioManager.Instance?.StopMusic(0.5f);
+
+        // Show 3 frames one by one
+        // You'll need to link these images in the Inspector
+        for (int i = 0; i < finalFrames.Length; i++)
+        {
+            GameObject img = finalFrames[i];
+            if (img != null)
+            {
+                img.SetActive(true);
+
+                // Second frame: Explosion sound
+                if (i == 1)
+                {
+                    AudioManager.Play(SFX.Explosion);
+                }
+
+                yield return new WaitForSecondsRealtime(0.6f);
+                img.SetActive(false);
+            }
+        }
+
+        // Final result: restart or load next scene
+        Time.timeScale = 1f;
+        // SceneManager.LoadScene(...) or whatever comes next
+    }
+
+    public GameObject[] finalFrames;
 
     void OnDestroy()
     {

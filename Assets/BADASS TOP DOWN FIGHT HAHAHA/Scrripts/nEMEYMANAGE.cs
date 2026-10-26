@@ -25,7 +25,7 @@ public class nEMEMYMANAGE : MonoBehaviour
 
         //Debug.Log("all waves cleared");
         AudioManager.Play(SFX.Victory);
-        winEnd.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         yield return new WaitForSeconds(0.5f);
     }
     public GameObject winEnd;

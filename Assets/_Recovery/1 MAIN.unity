@@ -85805,10 +85805,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1492591209}
   - component: {fileID: 1492591210}
-  - component: {fileID: 1492591213}
   - component: {fileID: 1492591212}
   - component: {fileID: 1492591211}
   - component: {fileID: 1492591214}
+  - component: {fileID: 1492591215}
   m_Layer: 0
   m_Name: stall_produce_0
   m_TagString: Untagged
@@ -85943,27 +85943,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutoTrigger
   E: {fileID: 2050480762}
   spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
---- !u!65 &1492591213
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492591208}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.9999998, y: 1.7713007, z: 0.19999999}
-  m_Center: {x: 0, y: 0.11434955, z: 0}
 --- !u!114 &1492591214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85978,6 +85957,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::customTutoTrigger
   E: {fileID: 2050480762}
   spriteToshow: {fileID: 21300000, guid: 85a6cd99774ef5f4ba98575714b4c0b1, type: 3}
+--- !u!61 &1492591215
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492591208}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &1493910327
 GameObject:
   m_ObjectHideFlags: 0
@@ -96906,10 +96931,10 @@ MonoBehaviour:
     volume: 0.14
   - id: 3
     clip: {fileID: 8300000, guid: dc9c3ee48c4034d4abfa681071648bea, type: 3}
-    volume: 0.28
+    volume: 0.384
   - id: 4
     clip: {fileID: 8300000, guid: a225e324127f81d4881b55956c1069b9, type: 3}
-    volume: 0.084
+    volume: 0.216
   - id: 5
     clip: {fileID: 8300000, guid: 795f76126569268408d2076a44058512, type: 3}
     volume: 0.194
@@ -96919,6 +96944,9 @@ MonoBehaviour:
   - id: 7
     clip: {fileID: 8300000, guid: 1ad2c048eea14184cb4a6a373b950155, type: 3}
     volume: 0.194
+  - id: 8
+    clip: {fileID: 8300000, guid: 57879600fffce824ab6e34c6ae6b5ac5, type: 3}
+    volume: 0.07
   playStartingTrack: 1
   startingTrack: 1
   musicVolume: 0.5
@@ -97092,6 +97120,7 @@ MonoBehaviour:
   - id: 35
     clips:
     - {fileID: 8300000, guid: d5f76368d7029bf42831da3f5bbe4f6a, type: 3}
+    - {fileID: 8300000, guid: 304d300e55c1e8d42966dfe700cd6224, type: 3}
     volume: 0.14
     pitchVariation: 0
     minInterval: 0
@@ -97128,7 +97157,81 @@ MonoBehaviour:
     minInterval: 0
   - id: 41
     clips:
-    - {fileID: 8300000, guid: 6a09219e52117a146b2ba7529fba509d, type: 3}
+    - {fileID: 8300000, guid: e639f3c739f642d4583de8ee96e7c95e, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 42
+    clips:
+    - {fileID: 8300000, guid: 556ec375e287f184888d64fa2d093415, type: 3}
+    - {fileID: 8300000, guid: 96f7b050206bb4f45acc5a0c998201cb, type: 3}
+    - {fileID: 8300000, guid: 9ca09cdb35a2f9444bcdc3d22d206c32, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 43
+    clips:
+    - {fileID: 8300000, guid: 3173ecff688c6ca4c945f403508e1fe0, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 44
+    clips:
+    - {fileID: 8300000, guid: f73d149fd2fa5274fb117e90db7b3502, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 45
+    clips:
+    - {fileID: 8300000, guid: 65c435e52c25c0045b79445cdfa051b2, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 48
+    clips:
+    - {fileID: 8300000, guid: 818030340ed00c947ac3ef18d8a46cab, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 46
+    clips:
+    - {fileID: 8300000, guid: 818030340ed00c947ac3ef18d8a46cab, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 47
+    clips:
+    - {fileID: 8300000, guid: 353601caf0ac0ed4e9201a7e54343651, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 4
+    clips:
+    - {fileID: 8300000, guid: a3cee5888ce8618409d778afa920adb4, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 5
+    clips:
+    - {fileID: 8300000, guid: eca0d339c658a694399d49b0f7100e75, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 6
+    clips:
+    - {fileID: 8300000, guid: eca0d339c658a694399d49b0f7100e75, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 7
+    clips:
+    - {fileID: 8300000, guid: eca0d339c658a694399d49b0f7100e75, type: 3}
+    volume: 0.14
+    pitchVariation: 0
+    minInterval: 0
+  - id: 8
+    clips:
+    - {fileID: 8300000, guid: eca0d339c658a694399d49b0f7100e75, type: 3}
     volume: 0.14
     pitchVariation: 0
     minInterval: 0
@@ -102161,7 +102264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2049749211
 Transform:
   m_ObjectHideFlags: 0
